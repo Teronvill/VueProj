@@ -1,5 +1,6 @@
 <template>
     <div v-if="flag" class="modal">
+      <div class="modal__Back"></div>
       <div class="container">
         <div class="modal__window">
           <div class="close">
@@ -48,14 +49,25 @@
   align-items: center;
 }
 .modal__window {
+  z-index: 3;
     background: #fff;
     display: flex;
     flex-direction: column;
     width: 650px;
     max-width: 100%;
+    border: solid 7px #FFFFFF;
     border-radius: 25px;
     background: linear-gradient(249.78deg, #35d3ff -0.64%, #a963fb 103.6%);
     align-items: center;
+}
+.modal__Back{
+  position:fixed;
+  z-index: 2;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.3);
 }
 h3{ 
   margin-top: 10px;
@@ -71,7 +83,10 @@ input {
   border-radius: 25px;
   width: 70%;
   font-size: 22px;
-  outline: none;
+
+}
+input:focus{
+  outline: #FFFFFF solid 1px;
 }
 .modal__close{
   width: 75px;
@@ -80,7 +95,9 @@ input {
 button{
   margin:15px;
   font-size:16px;
+  transition: 0.5s;
 }
+
 .close {
   display: flex;
   width: 100%;
@@ -89,5 +106,6 @@ button{
 .modal__submit{
   margin-top: 30px;
 }
+
   </style>
   

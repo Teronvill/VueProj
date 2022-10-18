@@ -117,6 +117,11 @@ body {
     font-weight: 700;
     font-size: 16px;
     color: #57b3fe;
+    transition: 0.5s;
+    
+  }
+  button:hover {
+    font-size:18px /* Увеличиваем масштаб */
   }
   @media (max-width: 768px) {
     button{
@@ -126,5 +131,9 @@ body {
   }
   li{
     cursor: pointer;
+    transition: 1s;
+  }
+  .header li:hover{
+    font-size: 20px;
   }
 </style>
